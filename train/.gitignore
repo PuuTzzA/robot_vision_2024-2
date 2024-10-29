@@ -1,7 +1,0 @@
-# Ignore all JPEG files
-*.jpeg
-*.jpg
-
-# Ignore all JPEG files in all folders and subfolders
-**/*.jpeg
-**/*.jpg
