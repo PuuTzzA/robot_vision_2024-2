@@ -1,0 +1,7 @@
+torch
+torchvision
+transforms
+pycocotools
+albumentations
+utils
+numpy
