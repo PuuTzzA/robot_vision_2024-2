@@ -11,6 +11,7 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{array}
+\usepackage{multicol}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -33,7 +34,7 @@
         \textit{Seoul National University}\\
         Seoul, South Korea \\
         email address or ORCID}
-    \and  
+    \and
     \IEEEauthorblockN{Weihao Chao}
     \IEEEauthorblockA{\textit{Mechanical Engineering} \\
         \textit{Seoul National University}\\
@@ -47,56 +48,160 @@
     Hello here goes the abstract
 \end{abstract}
 
-\section{Summarize the context}
+\section{Introduction}
 \begin{center}
     \cite{main-article}
-    (What the authors say why it matters.)
+    (Leave this citation for now, otherwise it breaks (if we have 0 citations, and the command at the end))
 \end{center}
 
-dddd
+Bla Bla Bla Bla
 
-\section{What is the research question?}
-\begin{center}
-    (If there initially was an abstract statement, state both that and a testable question or a verifiable statement i.e. testable hypothesis that came after.)
-\end{center}
+\section{3d Pose Estimation}
+\setcounter{MaxMatrixCols}{20}
 
-dddd
 
-\section{What was the approach used to generate the data?}
-\begin{center}
-    (e.g. survey, experiment, observation)
-\end{center}
+\begin{multicols}{2}
 
-dddd
+    double column text here. .double column text here. . .
+    double column text here. . .
+    double column text here. . .
+    double column text here. . .lkasj fundingasdf
 
-\section{What was the dataset?}
-\begin{center}
-    (describe how those were obtained and what were the key variables; provide exact definitions of the variables)
-\end{center}
+    lsakdfj laks ich icha heise laskdjf lasdffi cich ic ach 
+    .
 
-\section{How did they test the hypothesis?}
-\begin{center}
-    (statistical methods used or techniques / designs to tease out the specific relationship)
-\end{center}
+\end{multicols}
+ lkasdjf lakjsd flkajsdl fkjasdl fjasldj flaskdjf laskdjf laksjdfl kajsdflkajsdlfjasldkfjalsdkjflaskjdf laskdjf lasjkdfl aksjdflkasjd flaskjdf lkasdjf lkasjdf laksjdfl akjsdlfj asldkfj alsdjkf lasdjf laskdjf laskdjf laksdjfl aksdjfl askdjl askjf l
 
-\section{Summary of the results}
-\begin{center}
-    (What were the most interesting findings they could get out from the test?)
-\end{center}
+\begin{multicols}{2}
 
-\section{Did the authors highlight anything for the sake of the future?}
-\begin{center}
-    (e.g. perspectives, potential applications)
-\end{center}
+moin meister laskdfj a    double column text here. .double column text here. . .
+    double column text here. . .
+    double column text here. . .
+    double column text here. . .
+    .
 
-\section{ANY-things to criticize?}
+\end{multicols}
 
-\section{Better research ideas for the same research question?}
+Matrix representation of the standard projection onto the z = 1 plane.
+\begin{equation}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\
+        y \\
+        z \\
+        1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x \\
+        y \\
+        z \\
+        z
+    \end{bmatrix}
+    \overset{\text{div z}}{\equiv}
+    \begin{bmatrix}
+        \frac{x}{z} \\
+        \frac{y}{z} \\
+        1           \\
+    \end{bmatrix}
+\end{equation}
 
-\section{Are there other applications to which you may apply similar methods used in the study?}
-\begin{center}
-    (any question in any field)
-\end{center}
+The API projection Matrix
+
+\twocolumn[
+    \begin{equation} \label{eqn:API_matrix}
+        M_{API} = M_O M_P =
+        \begin{bmatrix}
+            \frac{2}{r - l} & 0               & 0               & \frac{-(r + l)}{r - l} \\
+            0               & \frac{2}{t - b} & 0               & \frac{-(t + b)}{t - b} \\
+            0               & 0               & \frac{2}{f - n} & \frac{-(f + n)}{f - n} \\
+            0               & 0               & 0               & 1
+        \end{bmatrix}
+        \begin{bmatrix}
+            n & 0 & 0     & 0   \\
+            0 & n & 0     & 0   \\
+            0 & 0 & n + f & -nf \\
+            0 & 0 & 1     & 0
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            c_1 & 0   & 0   & 0   \\
+            0   & c_2 & 0   & 0   \\
+            0   & 0   & c_3 & c_4 \\
+            0   & 0   & 1   & 0
+        \end{bmatrix}
+    \end{equation}
+    \begin{equation} \label{eqn:DLT}
+        \begin{bmatrix}
+            -c_1 x_1 & -c_1 y_1 & -c_1 z_1 & -c_1   & 0        & 0        & 0        & 0      & x_1 x_{1}' & y_1 x_{1}' & z_1 x_{1}' & x_{1}' \\
+            0        & 0        & 0        & 0      & -c_2 x_1 & -c_2 y_1 & -c_2 z_1 & -c_2   & x_1 y_{1}' & y_1 y_{1}' & z_1 y_{1}' & y_{1}' \\
+            \vdots   & \vdots   & \vdots   & \vdots & \vdots   & \vdots   & \vdots   & \vdots & \vdots     & \vdots     & \vdots     & \vdots \\
+            -c_1 x_n & -c_1 y_n & -c_1 z_n & -c_1   & 0        & 0        & 0        & 0      & x_n x_{n}' & y_n x_{n}' & z_n x_{n}' & x_{n}' \\
+            0        & 0        & 0        & 0      & -c_2 x_n & -c_2 y_n & -c_2 z_n & -c_2   & x_n y_{n}' & y_n y_{n}' & z_n y_{n}' & y_{n}' \\
+        \end{bmatrix}
+        \begin{bmatrix}
+            a      \\
+            b      \\
+            \vdots \\
+            k      \\
+            l
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            0      \\
+            0      \\
+            \vdots \\
+            0      \\
+            0
+        \end{bmatrix}
+    \end{equation}
+]
+
+To get the screen-space position of a vertex, we multiply it by its Modelview Matrix and API Projection Matrix before doing the projective division.
+We have all the parameters except the Model Matrix. $p' = M_{API} M_{Modelview} p$
+
+\begin{equation*}
+    \begin{bmatrix}
+        x' \\
+        y' \\
+    \end{bmatrix}
+    \overset{\text{div z}}{\equiv}
+    \begin{bmatrix}
+        c_1 & 0   & 0   & 0   \\
+        0   & c_2 & 0   & 0   \\
+        0   & 0   & c_3 & c_4 \\
+        0   & 0   & 1   & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        a & b & c & d \\
+        e & f & g & h \\
+        i & j & k & l \\
+        0 & 0 & 0 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\
+        y \\
+        z \\
+        1
+    \end{bmatrix}
+\end{equation*}
+
+If we multiply that out, we get for $x'$ and $y'$:
+
+\begin{gather*}
+    x' = \frac{c_1 a x + c_1 b y + c_1 c z + c_1 d}{ix + jy + kz + l} \\
+    y' = \frac{c_2 e x + c_2 f y + c_2 g z + c_2 h}{ix + jy + kz + l}
+\end{gather*}
+
+We can multiply by the denuminator and solve for 0. Since this holds for every pair of points $(p_{1} , p_{1}'), (p_{2} , p_{2}'), ..., (p_{n}, p_{n}')$ that we track we can create the following system of equation:
+\ref{eqn:DLT}
+
 
 \bibliographystyle{./IEEEtran.bst}
 \bibliography{./robot_vision}
