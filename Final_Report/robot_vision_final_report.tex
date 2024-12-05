@@ -11,7 +11,10 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{array}
+\usepackage{arydshln}
 \usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{listings}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -59,6 +62,44 @@ Bla Bla Bla Bla
 \section{3d Pose Estimation}
 \setcounter{MaxMatrixCols}{20}
 
+($A = U\Sigma V^{T}$)
+\cite{SVD}
+In the SVD $Ab = U\Sigma V^{T}b = 0$ implies $V^{T}b = 0$ since $U$ is invertible and has no nontrivial solutions for $Ub = 0$.
+Thus $V^{T}b$ must be a vector where only the rows corresponding to zero singular values contribute to the null space.
+The columns of $V$ that correspond to zero singular values in $\Sigma$ combined form a basis for the null space of $A$.
+
+\[
+    \renewcommand{\arraystretch}{1.5}
+    \left[\begin{array}{@{}c:c@{}}
+            R                        & t \\ \hdashline
+            \begin{array}{@{}ccc@{}}
+                0 & 0 & 0
+            \end{array} & 1
+        \end{array}\right]
+\]
+
+$\leq$
+
+\begin{lstlisting}[language=Python, basicstyle=\small, tabsize=4]
+#Pseudo code of the matching process
+#cars keeps track of all the cars in the scene
+#cars_n contains all the cars in the new frame
+for old_car in cars:
+    c, d = closest_car(cars_n, old_car)
+	if d > max_distance:
+        #the car left the frame
+	    cars.remove(old_car)
+	else:
+        old.match(c)
+        #every car can only be matched once
+        cars_n.remove(new_car)
+
+#all remaining not matched new cars
+for new_car in cars_n: 
+    #a new car has entered the frame 
+    cars.append(new_car) 
+\end{lstlisting}
+  
 
 \begin{multicols}{2}
 
@@ -67,21 +108,52 @@ Bla Bla Bla Bla
     double column text here. . .
     double column text here. . .lkasj fundingasdf
 
-    lsakdfj laks ich icha heise laskdjf lasdffi cich ic ach 
+    lsakdfj laks ich icha heise laskdjf lasdffi cich ic ach
     .
 
 \end{multicols}
- lkasdjf lakjsd flkajsdl fkjasdl fjasldj flaskdjf laskdjf laksjdfl kajsdflkajsdlfjasldkfjalsdkjflaskjdf laskdjf lasjkdfl aksjdflkasjd flaskjdf lkasdjf lkasjdf laksjdfl akjsdlfj asldkfj alsdjkf lasdjf laskdjf laskdjf laksdjfl aksdjfl askdjl askjf l
+lkasdjf lakjsd flkajsdl fkjasdl fjasldj flaskdjf laskdjf laksjdfl kajsdflkajsdlfjasldkfjalsdkjflaskjdf laskdjf lasjkdfl aksjdflkasjd flaskjdf lkasdjf lkasjdf laksjdfl akjsdlfj asldkfj alsdjkf lasdjf laskdjf laskdjf laksdjfl aksdjfl askdjl askjf l
 
-\begin{multicols}{2}
+\begin{equation}
+    FOV = 2 \cdot \arctan\left(\frac{s_w}{2f}\right),
+    r = n \cdot \tan\left(\frac{FOV}{2}\right)
+\end{equation}
 
-moin meister laskdfj a    double column text here. .double column text here. . .
-    double column text here. . .
-    double column text here. . .
-    double column text here. . .
-    .
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\columnwidth]{./images/view_coordinates_to_ndc.png}
+    \caption{Perspective projection from view space to NDC}
+    \label{img:view_to_ndc}
+\end{figure}
 
-\end{multicols}
+double column text here. .double column text here. . .
+double column text here. . .
+double column text here. . .
+double column text here. . .lkasj fundingasdf
+double column text here. .double column text here. . .
+double column text here. . .
+double column text here. . .
+double column text here. . .lkasj fundingasdf
+double column text here. .double column text here. . .
+double column text here. . .
+double column text here. . .
+double column text here. . .lkasj fundingasdf
+
+\begin{wrapfigure}{L}{0.5\columnwidth}
+    \centering
+    \includegraphics[width=0.45\columnwidth]{./images/focal_lenght_and_field_of_view.png}
+    \caption{The sensor width and the focal length are used to calculate the camera's field of view.}
+    \label{img:fov}
+\end{wrapfigure}
+
+double column text here. .double column text here. . .
+double column text here. . .
+double column text here. . .
+double column text here. . .lkasj fundingasdf
+double column text here. .double column text here. . .
+double column text here. . .
+double column text here. . .
+double column text here. . .lkasj fundingasdf
 
 Matrix representation of the standard projection onto the z = 1 plane.
 \begin{equation}
@@ -116,7 +188,7 @@ The API projection Matrix
 
 \twocolumn[
     \begin{equation} \label{eqn:API_matrix}
-        M_{API} = M_O M_P =
+        M_{P} = M_{P''} M_{P'} =
         \begin{bmatrix}
             \frac{2}{r - l} & 0               & 0               & \frac{-(r + l)}{r - l} \\
             0               & \frac{2}{t - b} & 0               & \frac{-(t + b)}{t - b} \\
@@ -171,7 +243,7 @@ We have all the parameters except the Model Matrix. $p' = M_{API} M_{Modelview} 
         x' \\
         y' \\
     \end{bmatrix}
-    \overset{\text{div z}}{\equiv}
+    \overset{\text{div w}}{\equiv}
     \begin{bmatrix}
         c_1 & 0   & 0   & 0   \\
         0   & c_2 & 0   & 0   \\

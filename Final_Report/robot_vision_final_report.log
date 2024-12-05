@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.29)  5 DEC 2024 02:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.29)  6 DEC 2024 03:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -346,31 +346,52 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \extratabsurround=\skip57
 \backup@length=\skip58
 \ar@cellbox=\box56
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/arydshln\arydshln.sty
+Package: arydshln 2019/02/21 v1.76 
+\dashlinedash=\dimen181
+\dashlinegap=\dimen182
+\adl@box=\box57
+\adl@height=\dimen183
+\adl@heightsave=\dimen184
+\adl@depth=\dimen185
+\adl@depthsave=\dimen186
+\adl@finaldepth=\dimen187
+\adl@columns=\count296
+\adl@ncol=\count297
+\adl@currentcolumn=\count298
+\adl@currentcolumnsave=\count299
+\adl@totalheight=\count300
+\adl@totalheightsave=\count301
+\adl@dash=\count302
+\adl@gap=\count303
+\adl@cla=\count304
+\adl@clb=\count305
+\adl@everyvbox=\toks25
+\adl@LTpagetotal=\dimen188
 ) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count296
-\mult@box=\box57
-\multicol@leftmargin=\dimen181
-\c@unbalance=\count297
-\c@collectmore=\count298
-\doublecol@number=\count299
-\multicoltolerance=\count300
-\multicolpretolerance=\count301
-\full@width=\dimen182
-\page@free=\dimen183
-\premulticols=\dimen184
-\postmulticols=\dimen185
+\c@tracingmulticols=\count306
+\mult@box=\box58
+\multicol@leftmargin=\dimen189
+\c@unbalance=\count307
+\c@collectmore=\count308
+\doublecol@number=\count309
+\multicoltolerance=\count310
+\multicolpretolerance=\count311
+\full@width=\dimen190
+\page@free=\dimen191
+\premulticols=\dimen192
+\postmulticols=\dimen193
 \multicolsep=\skip59
 \multicolbaselineskip=\skip60
-\partial@page=\box58
-\last@line=\box59
-\mc@boxedresult=\box60
-\maxbalancingoverflow=\dimen186
-\mult@rightbox=\box61
-\mult@grightbox=\box62
-\mult@firstbox=\box63
-\mult@gfirstbox=\box64
-\@tempa=\box65
+\partial@page=\box59
+\last@line=\box60
+\mc@boxedresult=\box61
+\maxbalancingoverflow=\dimen194
+\mult@rightbox=\box62
+\mult@grightbox=\box63
+\mult@firstbox=\box64
+\mult@gfirstbox=\box65
 \@tempa=\box66
 \@tempa=\box67
 \@tempa=\box68
@@ -406,78 +427,130 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box98
 \@tempa=\box99
 \@tempa=\box100
-\c@minrows=\count302
-\c@columnbadness=\count303
-\c@finalcolumnbadness=\count304
-\last@try=\dimen187
-\multicolovershoot=\dimen188
-\multicolundershoot=\dimen189
-\mult@nat@firstbox=\box101
-\colbreak@box=\box102
-\mc@col@check@num=\count305
-) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+\@tempa=\box101
+\c@minrows=\count312
+\c@columnbadness=\count313
+\c@finalcolumnbadness=\count314
+\last@try=\dimen195
+\multicolovershoot=\dimen196
+\multicolundershoot=\dimen197
+\mult@nat@firstbox=\box102
+\colbreak@box=\box103
+\mc@col@check@num=\count315
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/wrapfig\wrapfig.sty
+\wrapoverhang=\dimen198
+\WF@size=\dimen199
+\c@WF@wrappedlines=\count316
+\WF@box=\box104
+\WF@everypar=\toks26
+Package: wrapfig 2003/01/31  v 3.6
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count317
+\lst@gtempboxa=\box105
+\lst@token=\toks27
+\lst@length=\count318
+\lst@currlwidth=\dimen256
+\lst@column=\count319
+\lst@pos=\count320
+\lst@lostspace=\dimen257
+\lst@width=\dimen258
+\lst@newlines=\count321
+\lst@lineno=\count322
+\lst@maxwidth=\dimen259
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count323
+\lst@skipnumbers=\count324
+\lst@framebox=\box106
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box103
+\l__color_backend_stack_int=\count325
+\l__pdf_internal_box=\box107
 ) (robot_vision_final_report.aux)
 \openout1 = `robot_vision_final_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 -- Lines per column: 56 (exact).
 (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen190
-\scratchbox=\box104
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen191
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count326
+\scratchdimen=\dimen260
+\scratchbox=\box108
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen261
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks29
 ) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 22.
  (robot_vision_final_report.out) (robot_vision_final_report.out)
 \@outlinefile=\write3
 \openout3 = `robot_vision_final_report.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+\c@lstlisting=\count332
+LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 89.
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 89.
+<./images/view_coordinates_to_ndc.png, id=17, 513.49738pt x 604.31033pt>
+File: ./images/view_coordinates_to_ndc.png Graphic file (type png)
+<use ./images/view_coordinates_to_ndc.png>
+Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 124.
+(pdftex.def)             Requested size: 201.60077pt x 237.25687pt.
+ [1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
+ <./images/view_coordinates_to_ndc.png>]
+<./images/focal_lenght_and_field_of_view.png, id=57, 301.35753pt x 301.35753pt>
+File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
+<use ./images/focal_lenght_and_field_of_view.png>
+Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 144.
+(pdftex.def)             Requested size: 113.39923pt x 113.39964pt.
+ [2
 
-] (robot_vision_final_report.bbl)
+ <./images/focal_lenght_and_field_of_view.png>] (robot_vision_final_report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -489,7 +562,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
+[3
 
 
 ] (robot_vision_final_report.aux)
@@ -501,17 +574,17 @@ Package rerunfilecheck Info: File `robot_vision_final_report.out' has not change
 (rerunfilecheck)             Checksum: FE4E2D930C3046AA208EDB6E8FDAE740;336.
  ) 
 Here is how much of TeX's memory you used:
- 11373 strings out of 474542
- 179279 string characters out of 5744446
- 1956978 words of memory out of 5000000
- 33446 multiletter control sequences out of 15000+600000
- 594449 words of font info for 106 fonts, out of 8000000 for 9000
+ 13529 strings out of 474542
+ 208918 string characters out of 5744446
+ 1972978 words of memory out of 5000000
+ 35553 multiletter control sequences out of 15000+600000
+ 597528 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,381b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on robot_vision_final_report.pdf (2 pages, 129053 bytes).
+ 75i,13n,79p,548b,1485s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on robot_vision_final_report.pdf (3 pages, 352225 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
