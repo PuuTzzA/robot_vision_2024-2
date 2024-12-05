@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.29)  6 DEC 2024 03:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.29)  6 DEC 2024 03:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -539,18 +539,23 @@ File: ./images/view_coordinates_to_ndc.png Graphic file (type png)
 <use ./images/view_coordinates_to_ndc.png>
 Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 124.
 (pdftex.def)             Requested size: 201.60077pt x 237.25687pt.
+<./images/wireframes.png, id=19, 2509.375pt x 1003.75pt>
+File: ./images/wireframes.png Graphic file (type png)
+<use ./images/wireframes.png>
+Package pdftex.def Info: ./images/wireframes.png  used on input line 131.
+(pdftex.def)             Requested size: 176.39923pt x 70.54536pt.
  [1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
  <./images/view_coordinates_to_ndc.png>]
-<./images/focal_lenght_and_field_of_view.png, id=57, 301.35753pt x 301.35753pt>
+<./images/focal_lenght_and_field_of_view.png, id=58, 301.35753pt x 301.35753pt>
 File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
 <use ./images/focal_lenght_and_field_of_view.png>
-Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 144.
+Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 151.
 (pdftex.def)             Requested size: 113.39923pt x 113.39964pt.
  [2
 
- <./images/focal_lenght_and_field_of_view.png>] (robot_vision_final_report.bbl)
+ <./images/wireframes.png> <./images/focal_lenght_and_field_of_view.png>] (robot_vision_final_report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -574,17 +579,17 @@ Package rerunfilecheck Info: File `robot_vision_final_report.out' has not change
 (rerunfilecheck)             Checksum: FE4E2D930C3046AA208EDB6E8FDAE740;336.
  ) 
 Here is how much of TeX's memory you used:
- 13529 strings out of 474542
- 208918 string characters out of 5744446
+ 13538 strings out of 474542
+ 209151 string characters out of 5744446
  1972978 words of memory out of 5000000
- 35553 multiletter control sequences out of 15000+600000
+ 35561 multiletter control sequences out of 15000+600000
  597528 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,548b,1485s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on robot_vision_final_report.pdf (3 pages, 352225 bytes).
+Output written on robot_vision_final_report.pdf (3 pages, 808235 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 40 words of extra memory for PDF output out of 10000 (max. 10000000)
 

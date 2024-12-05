@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: robot_vision_final_report.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+The style file: ./IEEEtran.bst.bst
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: ./robot_vision.bib
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 2 entries,
+            4024 wiz_defined-function locations,
+            822 strings with 7811 characters,
+and the built_in function-call counts, 1727 in all, are:
+= -- 118
+> -- 65
+< -- 10
++ -- 35
+- -- 14
+* -- 100
+:= -- 258
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 3
+chr.to.int$ -- 21
+cite$ -- 2
+duplicate$ -- 116
+empty$ -- 121
+format.name$ -- 15
+if$ -- 376
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 28
+newline$ -- 31
+num.names$ -- 1
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 121
+stack$ -- 0
+substring$ -- 53
+swap$ -- 96
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 2
+warning$ -- 0
+while$ -- 4
+width$ -- 3
+write$ -- 43
