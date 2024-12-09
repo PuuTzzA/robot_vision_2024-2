@@ -329,7 +329,7 @@ Another problem is that while utilizing deep learning models only for the first 
 
 The direct linear transformation applied on noisy data was less accurate than initially hoped leading to passable results for still images but less than optimal results for image sequences where the speed calculation was performed. Since the speed is calculated every frame only based on the current and previous positions the calculation is very susceptible to small errors. To help alleviate that problem some kind of temporal smoothing should be implemented. 
 
-This would of course not be a problem if the estimated 3d pose was accurate. To achieve better results without completely overhauling the entire algorithm, a larger library of possible car models could be used to have a better matching between 2d key points and 3d vertices. This could be a big improvement since the direct linear transform model basically delivers perfect results for good key points where the underlying 3d model is known.
+This would of course not be a problem if the estimated 3d pose was accurate. To achieve better results without completely overhauling the entire algorithm, a larger library of possible car models could be used to have a better matching between 2d key points and 3d vertices. This could be a big improvement since the direct linear transformation model basically delivers perfect results for good key points where the underlying 3d model is known.
 
 Another area of improvement is the tracking of cars over multiple frames. In its current status it is very primitive and not robust against overlapping bounding boxes. Possible improvements include an implementation of the Kalman filter to better predict the next possible position.
 
