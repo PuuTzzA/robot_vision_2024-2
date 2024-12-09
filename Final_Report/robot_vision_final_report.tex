@@ -79,6 +79,45 @@ In this project, we adapt the OpenPifPaf pose-detection deep learning model for 
     \label{img:keypoints}
 \end{figure}
 
+\section{3D Pose Estimation}
+
+\subsection{Geometry Processing}
+
+To understand the 3d pose estimation process a basic understanding of the geometry processing stage of the 3d rendering pipeline is required. That is the process of how a 3d model and its vertices are transformed from points in 3d space to pixels on a 2d screen. 
+
+The vertices of a 3D model are defined in their local coordinate system, the so-called local space. If the model is placed inside the 3D scene, its position in world space can be controlled with the model matrix $M_{mod}$. World space is the coordinate system of the \textit{world}, the 3d scene where all the objects, lights, and the camera live. The camera's position and rotation in world space are determined by the inverse of the view matrix $M_{view}^{-1}$. For the next steps of the 3D rendering pipeline, it is generally preferred to have objects in view space rather than world space. View space is the reference frame of the camera, meaning the camera is located at its origin looking straight ahead. To transform an object from world- into viewspace, it just needs to be multiplied by the view matrix, meaning to get from local- to view space the composition of the model and view matrices can be used: this composition is called model view Matrix $M_{MV}=M_{view}M_{mod}$.
+
+The next step is figuring out where on the screen a vertex should be drawn. Once in view space, the projected position on the $z = 1$ plane can be computed by dividing the position of a vertex by its z-component. More formally you can multiply by the projection matrix and divide by the w-component. This matrix representation of the standard projection onto the $z = 1$ plane looks like this:
+
+\begin{equation}
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\
+        y \\
+        z \\
+        1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x \\
+        y \\
+        z \\
+        z
+    \end{bmatrix}
+    \overset{\text{div z}}{\equiv}
+    \begin{bmatrix}
+        \frac{x}{z} \\
+        \frac{y}{z} \\
+        1           \\
+    \end{bmatrix}
+\end{equation}
+
+
 
 \section{Introduction}
 \begin{center}
