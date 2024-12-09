@@ -2,6 +2,7 @@
 \providecommand\hyper@newdestlabel[2]{}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{Carfusion}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Project Objectives}{1}{section.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Project workflow.}}{1}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
@@ -9,32 +10,51 @@
 \@writefile{toc}{\contentsline {section}{\numberline {II}Vehicle Key Point Detection}{1}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {III}3D Pose Estimation}{1}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Geometry Processing}{1}{subsection.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box.}}{2}{figure.caption.2}\protected@file@percent }
-\newlabel{img:keypoints}{{2}{2}{Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box}{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\centering label 1}}}{2}{subfigure.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\centering label 2}}}{2}{subfigure.2.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The sensor width and the focal length are used to calculate the camera's field of view.}}{2}{figure.caption.4}\protected@file@percent }
-\newlabel{img:fov}{{4}{2}{The sensor width and the focal length are used to calculate the camera's field of view}{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Perspective projection from view space to NDC in 2d.}}{2}{figure.caption.5}\protected@file@percent }
-\newlabel{img:view_to_ndc}{{5}{2}{Perspective projection from view space to NDC in 2d}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The sensor width and the focal length are used to calculate the camera's field of view.}}{2}{figure.caption.3}\protected@file@percent }
+\newlabel{img:fov}{{3}{2}{The sensor width and the focal length are used to calculate the camera's field of view}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Perspective projection from view space to NDC in 2d.}}{2}{figure.caption.4}\protected@file@percent }
+\newlabel{img:view_to_ndc}{{4}{2}{Perspective projection from view space to NDC in 2d}{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Modelview Matrix Approximation}{2}{subsection.3.2}\protected@file@percent }
 \citation{SVD}
 \citation{RANSAC}
 \newlabel{eqn:API_matrix}{{2}{3}{Geometry Processing}{equation.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Different car wireframes used. From left to right Ford Explorer, Volvo V60, Nissan Altima.}}{3}{figure.caption.7}\protected@file@percent }
-\newlabel{img:wireframes}{{6}{3}{Different car wireframes used. From left to right Ford Explorer, Volvo V60, Nissan Altima}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Different car wireframes used. From left to right Ford Explorer, Volvo V60, Nissan Altima.}}{3}{figure.caption.6}\protected@file@percent }
+\newlabel{img:wireframes}{{5}{3}{Different car wireframes used. From left to right Ford Explorer, Volvo V60, Nissan Altima}{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Estimation Refinement}{3}{subsection.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Speed Estimation}{3}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Car Matching Over Multiple Frames}{3}{subsection.4.1}\protected@file@percent }
 \citation{keypoints}
 \citation{keypoint2pose}
+\newlabel{eqn:DLT}{{6}{4}{Modelview Matrix Approximation}{equation.3.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Experimental Results}{4}{section.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box.}}{4}{figure.caption.7}\protected@file@percent }
+\newlabel{img:keypoints}{{6}{4}{Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\centering Example 1}}}{4}{subfigure.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\centering Example 2}}}{4}{subfigure.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Result Discussion}{4}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Possible Improvements}{4}{subsection.6.1}\protected@file@percent }
 \bibstyle{./IEEEtran.bst}
 \bibdata{./robot_vision}
-\bibcite{SVD}{1}
-\bibcite{RANSAC}{2}
-\bibcite{keypoints}{3}
-\bibcite{keypoint2pose}{4}
-\newlabel{eqn:DLT}{{6}{4}{Modelview Matrix Approximation}{equation.3.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Materials}{4}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{4}{section*.8}\protected@file@percent }
-\gdef \@abspage@last{4}
+\bibcite{Carfusion}{1}
+\bibcite{SVD}{2}
+\bibcite{RANSAC}{3}
+\bibcite{keypoints}{4}
+\bibcite{keypoint2pose}{5}
+\newlabel{img:good}{{7a}{5}{Subfigure 7a}{subfigure.7.1}{}}
+\newlabel{sub@img:good}{{(a)}{a}{Subfigure 7a\relax }{subfigure.7.1}{}}
+\newlabel{img:decent}{{7b}{5}{Subfigure 7b}{subfigure.7.2}{}}
+\newlabel{sub@img:decent}{{(b)}{b}{Subfigure 7b\relax }{subfigure.7.2}{}}
+\newlabel{img:incorrectSpeed}{{7c}{5}{Subfigure 7c}{subfigure.7.3}{}}
+\newlabel{sub@img:incorrectSpeed}{{(c)}{c}{Subfigure 7c\relax }{subfigure.7.3}{}}
+\newlabel{img:incorrectModel}{{7d}{5}{Subfigure 7d}{subfigure.7.4}{}}
+\newlabel{sub@img:incorrectModel}{{(d)}{d}{Subfigure 7d\relax }{subfigure.7.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Examples of the output of the direct linear transformation model. The detected keypoints are shown in yellow, the wireframe of the predicted 3d model in red. Inliers of the RANSAC model are contained by green Triangles. The speed and its direction is shown above the respective car.}}{5}{figure.caption.8}\protected@file@percent }
+\newlabel{img:exampleOutput}{{7}{5}{Examples of the output of the direct linear transformation model. The detected keypoints are shown in yellow, the wireframe of the predicted 3d model in red. Inliers of the RANSAC model are contained by green Triangles. The speed and its direction is shown above the respective car}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {\centering Example 1}}}{5}{subfigure.7.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {\centering Example 2}}}{5}{subfigure.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {\centering Example 3}}}{5}{subfigure.7.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {\centering Example 4}}}{5}{subfigure.7.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Materials}{5}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Conclusion}{5}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.9}\protected@file@percent }
+\gdef \@abspage@last{5}

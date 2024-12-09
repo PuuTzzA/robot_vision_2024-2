@@ -21,9 +21,11 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
-
 \begin{document}
 \setcounter{MaxMatrixCols}{20}
+\pagenumbering{arabic}
+\pagestyle{plain}
+
 
 \title{3D Vehicle Reconstruction via Monocular Camera with Deep Learning Models and Direct Linear Transformation\\
 {\footnotesize 2024-2 Robot Vision (M3228.003000)}
@@ -42,7 +44,7 @@
         Seoul, South Korea \\
         theweihao@gmail.com}
     \and
-    \IEEEauthorblockN{Anggraini Ditha}
+    \IEEEauthorblockN{Ditha Anggraini}
     \IEEEauthorblockA{\textit{Civil and Environmental Engineering} \\
         \textit{Seoul National University}\\
         Seoul, South Korea \\
@@ -52,39 +54,30 @@
 \maketitle
 
 \begin{abstract}
-    You can set more than one value in the parameter, for instance, if you write [ht] LaTeX will try to position the table here, but if it's not possible (the space may be insufficient) then the table will appear at the top of the page. It is recommended to use more than one positioning parameter to prevent unexpected results.
-
-    Notice also the command. This changes the alignment of the table within its container to centre instead of the default left.
-
-    en you can use the environment wraptable which takes two parameters: The first one is the alignment that can be l, r, c, i or o for left, right, centre, inner and outer respectively. The second one is the width of the table container, keep in mind that this latter parameter must be the same as the width of the table, otherwise things may not be properly aligned.
-
+    This project presents a framework for 3d vehicle reconstruction from monocular camera images, using deep learning for the keypoint detection and traditional computer vision techniques for the geometric processing and pose estimation with the goal of predicting the 3d position, rotation and speed of cars. The proposed approach detects 2d key points with OpenPifPaf, a pose-detection deep learning model and uses the Direct Linear Transformation (DLT) process for the 3d pose estimation. Objects are tracked over multiple frames and their speed approximated. 
+    
+    The result, while looking good on static images, reveals some shortcomings when looking at image sequences. The proposed methodology fails to accurately approximate the speed of cars in most cases because the 3d pose estimation is not precise enough. This could be improved by detecting keypoints more accurately or by implementing temporal smoothing.     
 \end{abstract}
 
 \section{Project Objectives}
 
 This project aims to develop a workflow for reconstructing wireframe 3D vehicle models from monocular camera images. The approach involves detecting keypoints of vehicles using a deep learning framework, OpenPifPaf, that is designed for detecting human poses (key points) and other object structures within images. Using the CarFusion dataset (Reddy et al., 2018), we trained the deep learning model to recognize key vehicle features and use those to estimate a basic 3D model of vehicles and to estimate vehicle speed.
 
-Previous research in 3D vehicle reconstruction often relies heavily on deep learning models throughout the pipeline, utilizing techniques such as Graph Neural Networks (GNNs) in combination with Convolutional Neural Networks (CNNs) or transformers. While these methods can achieve high accuracy, they are computationally intensive and require substantial processing power, making them less practical for real-time applications or deployment on resource-constrained devices. Our project takes a different approach by limiting the use of deep learning to the initial stage of keypoint detection, where it excels at identifying critical features such as vehicle parts and keypoints from 2D images. Once these keypoints are identified, the methodology transitions to geometry-based point tracking and traditional computer vision techniques to perform 3D reconstruction and pose estimation. This strategic design significantly improves computational efficiency, as geometry-based methods are less resource-intensive than deep learning while still being capable of leveraging the spatial relationships inherent in 3D space. Our project also proposes the application of the RANSAC (Random Sample Consensus) algorithm for robust handling of errors in detected keypoints. Finally, while previous research focuses on static 3D pose reconstruction, our project extends its scope to estimate vehicle speed dynamically over time by utilizing primitive frame-by-frame car tracking
+Previous research in 3D vehicle reconstruction often heavily relies on deep learning models, utilizing techniques such as Graph Neural Networks (GNNs) in combination with Convolutional Neural Networks (CNNs) or transformers. While these methods can achieve high accuracy, they are computationally intensive and require substantial processing power, making them less practical for real-time applications or deployment on resource-constrained devices. Additionally, many existing techniques depend on stereo cameras or LiDAR sensors to obtain depth information, which, while accurate, introduces significant cost and complexity to the system. Our project takes a different approach by limiting the use of deep learning to the initial stage of keypoint detection, where it excels at identifying critical features such as vehicle parts and keypoints from 2D images. Once these keypoints are identified, the methodology transitions to geometry-based point tracking and traditional computer vision techniques to perform 3D reconstruction and pose estimation. This strategic design significantly improves computational efficiency, as geometry-based methods are less resource-intensive than deep learning while still being capable of leveraging the spatial relationships inherent in 3D space
 \ref{img:workflow}.
+
+Our project also proposes the application of the RANSAC (Random Sample Consensus) algorithm for robust handling of errors in detected keypoints. Finally, while previous research focuses on static 3D pose reconstruction, our project extends its scope to estimate vehicle speed dynamically over time by utilizing frame-by-frame car tracking.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\columnwidth]{./images/workflow.png}
+    \includegraphics[width=1\columnwidth]{./images/workflow.png}
     \caption{Project workflow.}
     \label{img:workflow}
 \end{figure}
 
 \section{Vehicle Key Point Detection}
 
-In this project, we adapt the OpenPifPaf pose-detection deep learning model for car keypoint detection. Using Carfusion datasets for testing and training data. For initial training, we utilized a pre-trained model with a ResNet-101 backbone. We trained the model on a subset of 10 images over 150 epochs. For this model, we successfully generated the weight file as well as the keypoint data of the predicted image.
-
-\begin{figure}[h]
-    \centering
-    \subfloat[\centering label 1]{{\includegraphics[width=.48\columnwidth]{./images/keypoint_vis1.jpg} }}
-    \subfloat[\centering label 2]{{\includegraphics[width=.48\columnwidth]{./images/keypoint_vis3.jpg} }}
-    \caption{Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box.}
-    \label{img:keypoints}
-\end{figure}
+For this project, an adapted version of the OpenPifPaf pose-detection deep learning model for car keypoint detection was used, using Carfusion datasets for testing and training data \cite{Carfusion}. The initial training was done with a pre-trained model with a ResNet-101 backbone. Then the model was trained on a subset of 10 images over 150 epochs. For this model the weight file as well as the keypoint data of the predicted image was successfully generated. 
 
 \section{3D Pose Estimation}
 
@@ -171,7 +164,6 @@ This process basically transforms the view frustum into a cube of side length tw
     \caption{Perspective projection from view space to NDC in 2d.}
     \label{img:view_to_ndc}
 \end{figure}
-
 
 \subsection{Modelview Matrix Approximation}
 
@@ -276,7 +268,6 @@ Since the detected key points can be incorrect it is of utmost importance that t
 
 To calculate the speed, it is not enough to know the relative location of the car at a specific point in time. It is also necessary to know the location of the same car at a different point in time. Since the Keypoint Detection step only detects the car's key points and bounding box, it is not trivial to know which car is which in the next frame. But since videos are usually shot at 30fps or more, a car's bounding box does not move very far from one frame to another. Considering this and the fact that generally there are not a lot of cars whose bounding boxes overlap, the simple approach of matching the two cars whose bounding boxes are closest to each other works just fine. To allow new cars to enter the frame and old cars to leave the frame the variable $max\_distance$ is used, which describes the maximum distance a car can move from one frame to the next.
 
-
 \begin{lstlisting}[language=Python, basicstyle=\small, tabsize=4]
 #Pseudo code of the matching process
 #cars keeps track of all the cars in the scene
@@ -297,11 +288,60 @@ for new_car in cars_n:
     cars.append(new_car) 
 \end{lstlisting}
 
-Once the 3d position of a car over multiple frames is known, the car's speed can be calculated by dividing the distance traveled by the elapsed time. 
+Once the 3d position of a car over multiple frames is known, the car's speed can be calculated by dividing the distance traveled by the elapsed time.
+
+\section{Experimental Results}
+
+The key point detection model accurately detects the key points accurately in most situations as seen in \ref{img:keypoints}.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[\centering Example 1]{{\includegraphics[width=.48\columnwidth]{./images/keypoint_vis1.jpg} }}
+    \subfloat[\centering Example 2]{{\includegraphics[width=.48\columnwidth]{./images/keypoint_vis3.jpg} }}
+    \caption{Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box.}
+    \label{img:keypoints}
+\end{figure}
+
+Results of the second part of the project are not as good. Figures \ref{img:good} and \ref{img:decent} show acceptable results, but this is unfortunately the exception and not the norm. While the 3d model is positioned in the right position for almost all images, the accuracy is not big enough to correctly approximate the speed of the vehicles as shown in \ref{img:incorrectSpeed} and \ref{img:incorrectModel}. An additional problem can be seen in \ref{img:incorrectModel} where the 3d pose of the Truck cannot be estimated reliably since the library of 3d models does not include a similar vehicle. 
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[\centering Example 1]{{\includegraphics[width=.9\columnwidth]{./images/video5_out_1080.png}} \label{img:good}}
+    \qquad
+    \subfloat[\centering Example 2]{{\includegraphics[width=.9\columnwidth]{./images/custom_0155.png} } \label{img:decent}}
+    \qquad
+    \subfloat[\centering Example 3]{{\includegraphics[width=.9\columnwidth]{./images/video5_out_1096.png} } \label{img:incorrectSpeed}}
+    \qquad
+    \subfloat[\centering Example 4]{{\includegraphics[width=.9\columnwidth]{./images/custom_0116.png} } \label{img:incorrectModel}}
+    \caption{Examples of the output of the direct linear transformation model. The detected keypoints are shown in yellow, the wireframe of the predicted 3d model in red. Inliers of the RANSAC model are contained by green Triangles. The speed and its direction is shown above the respective car.}
+    \label{img:exampleOutput}
+\end{figure}
+
+\section{Result Discussion}
+
+Our project successfully outputs the general wireframe 3D vehicles with only monocular camera images input, while using deep learning only for keypoint detection and utilizing traditional computer vision algorithms, as shown in the previous part. In addition, we try to estimate the speed of vehicles through frame-by-frame tracking.
+
+The project, while qualitatively effective in addressing the 3D vehicle pose estimation problem, has limitations that affect its precision and applicability. The Direct Linear Transformation (DLT) model heavily relies on the accuracy of detected keypoints and the fit between 2D and 3D models, which makes it less robust in scenarios with noisy or inconsistent keypoints. Though it produces acceptable results for still consequent images, it produces less optimal results for image sequences when speed calculation was performed. Additionally, our proposed method struggles with maintaining accuracy over image sequences, especially for dynamic tasks like vehicle speed calculation, and lacks sophisticated or robust tracking mechanisms for occluded objects with overlapping bounding boxes. 
+
+Another problem is that while utilizing deep learning models only for the first step, the model still takes multiple seconds per frame for its computations, which is still not appropriate for real-time applications.
+
+\subsection{Possible Improvements}
+
+The direct linear transformation applied on noisy data was less accurate than initially hoped leading to passable results for still images but less than optimal results for image sequences where the speed calculation was performed. Since the speed is calculated every frame only based on the current and previous positions the calculation is very susceptible to small errors. To help alleviate that problem some kind of temporal smoothing should be implemented. 
+
+This would of course not be a problem if the estimated 3d pose was accurate. To achieve better results without completely overhauling the entire algorithm, a larger library of possible car models could be used to have a better matching between 2d key points and 3d vertices. This could be a big improvement since the direct linear transform model basically delivers perfect results for good key points where the underlying 3d model is known.
+
+Another area of improvement is the tracking of cars over multiple frames. In its current status it is very primitive and not robust against overlapping bounding boxes. Possible improvements include an implementation of the Kalman filter to better predict the next possible position.
 
 \section{Materials}
 
 The original source code for the keypoint detection can be found here \cite{keypoints} and the source code for the 3d pose reconstruction and 3d visualization is available on this github repository \cite{keypoint2pose}.
+
+\section{Conclusion}
+
+In this project, we developed a framework for wireframe 3D vehicle reconstruction from monocular camera input, combining deep learning for keypoint detection in the initial stage with traditional computer vision algorithms, including Direct Linear Transformation (DLT), for subsequent pose estimation. In addition, we extended our project to estimate vehicle speed using frame-by-frame tracking of 3D positions of vehicles. Our approach focuses on leveraging the efficiency and interpretability of geometry-based methods while minimizing the computational overhead typically associated with deep learning models.
+
+The qualitative results demonstrate that our framework effectively constructs approximate 3D vehicle models from monocular images, highlighting its potential for applications in scenarios where depth information from stereo cameras or LiDAR is unavailable. Despite these achievements, the system has limitations in precision, particularly when dealing with noisy keypoint detections, mismatches between 2D keypoints and 3D vehicle models, or overlapping objects in dynamic scenes. These limitations, alongside the computational time required per frame, constrain its utility for real-time applications and more complex tracking tasks. While the current framework provides a strong foundation, we hope that future research will significantly expand its applicability and reliability in real-world scenarios.
 
 \bibliographystyle{./IEEEtran.bst}
 \bibliography{./robot_vision}

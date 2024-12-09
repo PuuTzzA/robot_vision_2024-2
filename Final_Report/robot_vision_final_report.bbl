@@ -21,6 +21,14 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Carfusion}
+\BIBentryALTinterwordspacing
+N.~D. Reddy, M.~Vo, and S.~G. Narasimhan, ``Carfusion: Combining point tracking
+  and part detection for dynamic 3d reconstruction of vehicles,'' accessed:
+  2024-12-08. [Online]. Available:
+  \url{https://openaccess.thecvf.com/content_cvpr_2018/papers/Reddy_CarFusion_Combining_Point_CVPR_2018_paper.pdf}
+\BIBentrySTDinterwordspacing
+
 \bibitem{SVD}
 ``Singular value decomposition,''
   \url{https://en.wikipedia.org/wiki/Singular_value_decomposition}, accessed:
