@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  8 DEC 2024 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  8 DEC 2024 14:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -518,44 +518,65 @@ Package hyperref Info: Link coloring OFF on input line 22.
 \openout3 = `robot_vision_final_report.out'.
 
 \c@lstlisting=\count332
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for OML+ptm on input line 89.
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 119.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 89.
-<./images/view_coordinates_to_ndc.png, id=17, 513.49738pt x 604.31033pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 119.
+<./images/view_coordinates_to_ndc.png, id=19, 513.49738pt x 604.31033pt>
 File: ./images/view_coordinates_to_ndc.png Graphic file (type png)
 <use ./images/view_coordinates_to_ndc.png>
-Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 124.
+Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 154.
 (pdftex.def)             Requested size: 201.60077pt x 237.25687pt.
-<./images/wireframes.png, id=19, 2509.375pt x 1003.75pt>
+<./images/wireframes.png, id=21, 2509.375pt x 1003.75pt>
 File: ./images/wireframes.png Graphic file (type png)
 <use ./images/wireframes.png>
-Package pdftex.def Info: ./images/wireframes.png  used on input line 131.
+Package pdftex.def Info: ./images/wireframes.png  used on input line 161.
 (pdftex.def)             Requested size: 176.39923pt x 70.54536pt.
+<./images/focal_lenght_and_field_of_view.png, id=22, 301.35753pt x 301.35753pt>
+File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
+<use ./images/focal_lenght_and_field_of_view.png>
+Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 181.
+(pdftex.def)             Requested size: 113.39923pt x 113.39964pt.
  [1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
- <./images/view_coordinates_to_ndc.png>]
-<./images/focal_lenght_and_field_of_view.png, id=58, 301.35753pt x 301.35753pt>
-File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
-<use ./images/focal_lenght_and_field_of_view.png>
-Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 151.
-(pdftex.def)             Requested size: 113.39923pt x 113.39964pt.
- [2
+]
+Underfull \hbox (badness 1946) in paragraph at lines 259--261
+\OT1/ptm/m/n/10 po-si-tion of a ver-tex, we
+ []
 
- <./images/wireframes.png> <./images/focal_lenght_and_field_of_view.png>] (robot_vision_final_report.bbl)
+
+Underfull \hbox (badness 1515) in paragraph at lines 259--261
+\OT1/ptm/m/n/10 jec-tive di-vi-sion. We have
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 259--261
+\OT1/ptm/m/n/10 all the pa-ram-e-ters ex-cept
+ []
+
+
+Overfull \hbox (93.75076pt too wide) detected at line 286
+[] [] [] [] []
+ []
+
+(robot_vision_final_report.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -567,10 +588,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3
-
-
-] (robot_vision_final_report.aux)
+[2 <./images/view_coordinates_to_ndc.png> <./images/wireframes.png> <./images/focal_lenght_and_field_of_view.png>] [3] (robot_vision_final_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -579,17 +597,17 @@ Package rerunfilecheck Info: File `robot_vision_final_report.out' has not change
 (rerunfilecheck)             Checksum: FE4E2D930C3046AA208EDB6E8FDAE740;336.
  ) 
 Here is how much of TeX's memory you used:
- 13538 strings out of 474542
- 209151 string characters out of 5744446
- 1972978 words of memory out of 5000000
- 35561 multiletter control sequences out of 15000+600000
+ 13541 strings out of 474542
+ 209217 string characters out of 5744446
+ 2008978 words of memory out of 5000000
+ 35563 multiletter control sequences out of 15000+600000
  597528 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,548b,1485s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on robot_vision_final_report.pdf (3 pages, 808248 bytes).
+<C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on robot_vision_final_report.pdf (3 pages, 873949 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
  40 words of extra memory for PDF output out of 10000 (max. 10000000)
 
