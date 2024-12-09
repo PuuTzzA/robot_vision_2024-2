@@ -15,6 +15,8 @@
 \usepackage{multicol}
 \usepackage{wrapfig}
 \usepackage{listings}
+\usepackage{subfig}
+\usepackage{graphicx,subcaption,lipsum}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -30,19 +32,19 @@
     \IEEEauthorblockA{\textit{Computer Science and Engineering} \\
         \textit{Seoul National University}\\
         Seoul, South Korea \\
-        putzer\_thomas@snu.ac.kr}
+        putzerthomas55@gmail.com}
     \and
     \IEEEauthorblockN{Weihao Chao}
     \IEEEauthorblockA{\textit{Mechanical Engineering} \\
         \textit{Seoul National University}\\
         Seoul, South Korea \\
-        email address or ORCID}
+        theweihao@gmail.com}
     \and
     \IEEEauthorblockN{Anggraini Ditha}
     \IEEEauthorblockA{\textit{Civil and Environmental Engineering} \\
         \textit{Seoul National University}\\
         Seoul, South Korea \\
-        email address or ORCID}
+        dithanggraini1598@gmail.com}
 }
 
 \maketitle
@@ -51,13 +53,40 @@
     Hello here goes the abstract
 \end{abstract}
 
+\section{Project Objectives}
+
+This project aims to develop a workflow for reconstructing wireframe 3D vehicle models from monocular camera images. The approach involves detecting keypoints of vehicles using a deep learning framework, OpenPifPaf, that is designed for detecting human poses (key points) and other object structures within images. Using the CarFusion dataset (Reddy et al., 2018), we trained the deep learning model to recognize key vehicle features and use those to estimate a basic 3D model of vehicles and to estimate vehicle speed. 
+
+Previous research in 3D vehicle reconstruction often relies heavily on deep learning models throughout the pipeline, utilizing techniques such as Graph Neural Networks (GNNs) in combination with Convolutional Neural Networks (CNNs) or transformers. While these methods can achieve high accuracy, they are computationally intensive and require substantial processing power, making them less practical for real-time applications or deployment on resource-constrained devices. Our project takes a different approach by limiting the use of deep learning to the initial stage of keypoint detection, where it excels at identifying critical features such as vehicle parts and keypoints from 2D images. Once these keypoints are identified, the methodology transitions to geometry-based point tracking and traditional computer vision techniques to perform 3D reconstruction and pose estimation. This strategic design significantly improves computational efficiency, as geometry-based methods are less resource-intensive than deep learning while still being capable of leveraging the spatial relationships inherent in 3D space. Our project also proposes the application of the RANSAC (Random Sample Consensus) algorithm for robust handling of errors in detected keypoints. Finally, while previous research focuses on static 3D pose reconstruction, our project extends its scope to estimate vehicle speed dynamically over time by utilizing primitive frame-by-frame car tracking
+\ref{img:workflow}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{./images/workflow.png}
+    \caption{Project workflow.}
+    \label{img:workflow}
+\end{figure}
+
+\section{Vehicle Key Point Detection}
+
+In this project, we adapt the OpenPifPaf pose-detection deep learning model for car keypoint detection. Using Carfusion datasets for testing and training data. For initial training, we utilized a pre-trained model with a ResNet-101 backbone. We trained the model on a subset of 10 images over 150 epochs. For this model, we successfully generated the weight file as well as the keypoint data of the predicted image.
+
+\begin{figure}[h]
+    \centering
+    \subfloat[\centering label 1]{{\includegraphics[width=.48\columnwidth]{./images/keypoint_vis1.jpg} }}
+    \subfloat[\centering label 2]{{\includegraphics[width=.48\columnwidth]{./images/keypoint_vis3.jpg} }}
+    \caption{Examples of the predicted key points from the OpenPifPaf model. Detected keypoints are shown in yellow and the computed bounding box in red. The overall confidence score is shown above the bounding box.}
+    \label{img:keypoints}
+\end{figure}
+
+
 \section{Introduction}
 \begin{center}
     \cite{main-article}
     (Leave this citation for now, otherwise it breaks (if we have 0 citations, and the command at the end))
 \end{center}
 
-Bla Bla Bla Bla
+
 
 \section{3d Pose Estimation}
 \setcounter{MaxMatrixCols}{20}
@@ -87,7 +116,7 @@ Bla Bla Bla Bla
     \end{equation}
     \caption[]{The values $r$, $l$, $t$ and $b$ can be calculated from the focal length and sensor size of the camera (see \ref{img:fov}). E.g., $r$ can be calculated in the following way:
         $r = n \cdot \tan\left(\frac{FOV}{2}\right),
-        FOV = 2 \cdot \arctan\left(\frac{s_w}{2f}\right)$,
+            FOV = 2 \cdot \arctan\left(\frac{s_w}{2f}\right)$,
         ($s_w$ = sensor width, $f$ = focal length, $FOV$ = field of view).
     }
 \end{figure*}

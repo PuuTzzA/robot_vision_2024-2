@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  8 DEC 2024 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  9 DEC 2024 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -466,45 +466,103 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen260
+\captionmargin=\dimen261
+\caption@leftmargin=\dimen262
+\caption@rightmargin=\dimen263
+\caption@width=\dimen264
+\caption@indent=\dimen265
+\caption@parindent=\dimen266
+\caption@hangindent=\dimen267
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1175.
+)
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count325
+\c@continuedfloat=\count326
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+\c@KVtest=\count327
+\sf@farskip=\skip61
+\sf@captopadj=\dimen268
+\sf@capskip=\skip62
+\sf@nearskip=\skip63
+\c@subfigure=\count328
+\c@subfigure@save=\count329
+\c@lofdepth=\count330
+\c@subtable=\count331
+\c@subtable@save=\count332
+\c@lotdepth=\count333
+\sf@top=\skip64
+\sf@bottom=\skip65
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+LaTeX Info: Redefining \subref on input line 189.
+Package subcaption Info: The counter `subfigure' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input line 238.
+Package subcaption Info: The counter `subtable' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input line 238.
+) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-22 L3 programming layer (loader) 
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count325
+\l__color_backend_stack_int=\count334
 \l__pdf_internal_box=\box107
-) (robot_vision_final_report.aux)
+))
+Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count335
+\l__lipsum_a_int=\count336
+\l__lipsum_b_int=\count337
+ (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (robot_vision_final_report.aux)
 \openout1 = `robot_vision_final_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 -- Lines per column: 56 (exact).
 (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen260
+\scratchcounter=\count338
+\scratchdimen=\dimen269
 \scratchbox=\box108
-\nofMPsegments=\count327
-\nofMParguments=\count328
+\nofMPsegments=\count339
+\nofMParguments=\count340
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen261
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
+\MPscratchCnt=\count341
+\MPscratchDim=\dimen270
+\MPnumerator=\count342
+\makeMPintoPDFobject=\count343
 \everyMPtoPDFconversion=\toks29
 ) (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -512,67 +570,88 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 24.
  (robot_vision_final_report.out) (robot_vision_final_report.out)
 \@outlinefile=\write3
 \openout3 = `robot_vision_final_report.out'.
 
-\c@lstlisting=\count332
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
+\c@lstlisting=\count344
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+<./images/workflow.png, id=24, 879.285pt x 150.5625pt>
+File: ./images/workflow.png Graphic file (type png)
+<use ./images/workflow.png>
+Package pdftex.def Info: ./images/workflow.png  used on input line 65.
+(pdftex.def)             Requested size: 226.79846pt x 38.83517pt.
+<./images/keypoint_vis1.jpg, id=25, 1927.2pt x 1084.05pt>
+File: ./images/keypoint_vis1.jpg Graphic file (type jpg)
+<use ./images/keypoint_vis1.jpg>
+Package pdftex.def Info: ./images/keypoint_vis1.jpg  used on input line 76.
+(pdftex.def)             Requested size: 120.95892pt x 68.03415pt.
+<./images/keypoint_vis3.jpg, id=26, 1927.2pt x 1084.05pt>
+File: ./images/keypoint_vis3.jpg Graphic file (type jpg)
+<use ./images/keypoint_vis3.jpg>
+Package pdftex.def Info: ./images/keypoint_vis3.jpg  used on input line 77.
+(pdftex.def)             Requested size: 120.95892pt x 68.03415pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-(C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+[1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+
+ <./images/workflow.png> <./images/keypoint_vis1.jpg> <./images/keypoint_vis3.jpg>] (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for OML+ptm on input line 119.
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 148.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 119.
-<./images/view_coordinates_to_ndc.png, id=19, 513.49738pt x 604.31033pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 148.
+<./images/view_coordinates_to_ndc.png, id=49, 513.49738pt x 604.31033pt>
 File: ./images/view_coordinates_to_ndc.png Graphic file (type png)
 <use ./images/view_coordinates_to_ndc.png>
-Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 154.
+Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 183.
 (pdftex.def)             Requested size: 201.60077pt x 237.25687pt.
-<./images/wireframes.png, id=21, 2509.375pt x 1003.75pt>
+<./images/wireframes.png, id=51, 2509.375pt x 1003.75pt>
 File: ./images/wireframes.png Graphic file (type png)
 <use ./images/wireframes.png>
-Package pdftex.def Info: ./images/wireframes.png  used on input line 161.
+Package pdftex.def Info: ./images/wireframes.png  used on input line 190.
 (pdftex.def)             Requested size: 176.39923pt x 70.54536pt.
-<./images/focal_lenght_and_field_of_view.png, id=22, 301.35753pt x 301.35753pt>
+<./images/focal_lenght_and_field_of_view.png, id=52, 301.35753pt x 301.35753pt>
 File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
 <use ./images/focal_lenght_and_field_of_view.png>
-Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 181.
+Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 210.
 (pdftex.def)             Requested size: 113.39923pt x 113.39964pt.
- [1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-]
-Underfull \hbox (badness 1946) in paragraph at lines 259--261
+ [2 <./images/view_coordinates_to_ndc.png> <./images/wireframes.png>]
+Underfull \hbox (badness 1946) in paragraph at lines 288--290
 \OT1/ptm/m/n/10 po-si-tion of a ver-tex, we
  []
 
 
-Underfull \hbox (badness 1515) in paragraph at lines 259--261
+Underfull \hbox (badness 1515) in paragraph at lines 288--290
 \OT1/ptm/m/n/10 jec-tive di-vi-sion. We have
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 259--261
+Underfull \hbox (badness 1648) in paragraph at lines 288--290
 \OT1/ptm/m/n/10 all the pa-ram-e-ters ex-cept
  []
 
 
-Overfull \hbox (93.75076pt too wide) detected at line 286
+Overfull \hbox (93.75076pt too wide) detected at line 315
 [] [] [] [] []
  []
 
@@ -588,26 +667,28 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./images/view_coordinates_to_ndc.png> <./images/wireframes.png> <./images/focal_lenght_and_field_of_view.png>] [3] (robot_vision_final_report.aux)
+[3
+
+ <./images/focal_lenght_and_field_of_view.png>] [4] (robot_vision_final_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `robot_vision_final_report.out' has not changed.
-(rerunfilecheck)             Checksum: FE4E2D930C3046AA208EDB6E8FDAE740;336.
+(rerunfilecheck)             Checksum: 2DF0EEB943694D03ECB996CEC1E342A7;659.
  ) 
 Here is how much of TeX's memory you used:
- 13541 strings out of 474542
- 209217 string characters out of 5744446
- 2008978 words of memory out of 5000000
- 35563 multiletter control sequences out of 15000+600000
+ 15545 strings out of 474542
+ 250469 string characters out of 5744446
+ 1974978 words of memory out of 5000000
+ 37533 multiletter control sequences out of 15000+600000
  597528 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,548b,1485s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on robot_vision_final_report.pdf (3 pages, 873949 bytes).
+ 79i,13n,93p,1600b,1489s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on robot_vision_final_report.pdf (4 pages, 1512857 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 40 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
