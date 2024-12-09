@@ -15,44 +15,44 @@ Database file #1: ./robot_vision.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 2 entries,
+You've used 4 entries,
             4024 wiz_defined-function locations,
-            822 strings with 7811 characters,
-and the built_in function-call counts, 1727 in all, are:
-= -- 118
-> -- 65
-< -- 10
-+ -- 35
-- -- 14
-* -- 100
-:= -- 258
-add.period$ -- 4
-call.type$ -- 2
-change.case$ -- 3
-chr.to.int$ -- 21
-cite$ -- 2
-duplicate$ -- 116
-empty$ -- 121
-format.name$ -- 15
-if$ -- 376
+            828 strings with 7776 characters,
+and the built_in function-call counts, 1517 in all, are:
+= -- 117
+> -- 10
+< -- 0
++ -- 6
+- -- 2
+* -- 63
+:= -- 276
+add.period$ -- 8
+call.type$ -- 4
+change.case$ -- 8
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 130
+empty$ -- 147
+format.name$ -- 2
+if$ -- 314
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 28
-newline$ -- 31
-num.names$ -- 1
-pop$ -- 72
+int.to.str$ -- 4
+missing$ -- 30
+newline$ -- 35
+num.names$ -- 2
+pop$ -- 84
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 121
+skip$ -- 116
 stack$ -- 0
-substring$ -- 53
-swap$ -- 96
-text.length$ -- 3
+substring$ -- 12
+swap$ -- 70
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 2
+type$ -- 4
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 43
+while$ -- 2
+width$ -- 5
+write$ -- 54

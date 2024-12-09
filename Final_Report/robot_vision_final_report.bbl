@@ -21,19 +21,23 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{main-article}
-\BIBentryALTinterwordspacing
-J.-B. Michel, Y.~K. Shen, A.~P. Aiden, A.~Veres, M.~K. Gray, T.~G.~B. Team,
-  J.~P. Pickett, D.~Hoiberg, D.~Clancy, P.~Norvig, J.~Orwant, S.~Pinker, M.~A.
-  Nowak, and E.~L. Aiden, ``Quantitative analysis of culture using millions of
-  digitized books,'' \emph{Science}, vol. 331, no. 6014, pp. 176--182, 2011.
-  [Online]. Available:
-  \url{https://www.science.org/doi/abs/10.1126/science.1199644}
-\BIBentrySTDinterwordspacing
-
 \bibitem{SVD}
 ``Singular value decomposition,''
   \url{https://en.wikipedia.org/wiki/Singular_value_decomposition}, accessed:
   2024-12-06.
+
+\bibitem{RANSAC}
+``Random sample consensus,''
+  \url{https://en.wikipedia.org/wiki/Random_sample_consensus}, accessed:
+  2024-12-06.
+
+\bibitem{keypoints}
+M.~Bonnesoeur, ``Semester project : Keypoint-based vehicle 3d localization,''
+  \url{https://github.com/LouisNUST/keypoint-based-car-detector/tree/master},
+  2020, accessed: 2024-12-08.
+
+\bibitem{keypoint2pose}
+T.~Putzer, ``keypoint2pose,'' \url{https://github.com/PuuTzzA/keypoint2pose},
+  2024, source code for the 3d pose approximation step.
 
 \end{thebibliography}

@@ -17,11 +17,13 @@
 \usepackage{listings}
 \usepackage{subfig}
 \usepackage{graphicx,subcaption,lipsum}
+\usepackage{float}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
 
 \begin{document}
+\setcounter{MaxMatrixCols}{20}
 
 \title{3D Vehicle Reconstruction via Monocular Camera with Deep Learning Models and Direct Linear Transformation\\
 {\footnotesize 2024-2 Robot Vision (M3228.003000)}
@@ -50,12 +52,17 @@
 \maketitle
 
 \begin{abstract}
-    Hello here goes the abstract
+    You can set more than one value in the parameter, for instance, if you write [ht] LaTeX will try to position the table here, but if it's not possible (the space may be insufficient) then the table will appear at the top of the page. It is recommended to use more than one positioning parameter to prevent unexpected results.
+
+    Notice also the command. This changes the alignment of the table within its container to centre instead of the default left.
+
+    en you can use the environment wraptable which takes two parameters: The first one is the alignment that can be l, r, c, i or o for left, right, centre, inner and outer respectively. The second one is the width of the table container, keep in mind that this latter parameter must be the same as the width of the table, otherwise things may not be properly aligned.
+
 \end{abstract}
 
 \section{Project Objectives}
 
-This project aims to develop a workflow for reconstructing wireframe 3D vehicle models from monocular camera images. The approach involves detecting keypoints of vehicles using a deep learning framework, OpenPifPaf, that is designed for detecting human poses (key points) and other object structures within images. Using the CarFusion dataset (Reddy et al., 2018), we trained the deep learning model to recognize key vehicle features and use those to estimate a basic 3D model of vehicles and to estimate vehicle speed. 
+This project aims to develop a workflow for reconstructing wireframe 3D vehicle models from monocular camera images. The approach involves detecting keypoints of vehicles using a deep learning framework, OpenPifPaf, that is designed for detecting human poses (key points) and other object structures within images. Using the CarFusion dataset (Reddy et al., 2018), we trained the deep learning model to recognize key vehicle features and use those to estimate a basic 3D model of vehicles and to estimate vehicle speed.
 
 Previous research in 3D vehicle reconstruction often relies heavily on deep learning models throughout the pipeline, utilizing techniques such as Graph Neural Networks (GNNs) in combination with Convolutional Neural Networks (CNNs) or transformers. While these methods can achieve high accuracy, they are computationally intensive and require substantial processing power, making them less practical for real-time applications or deployment on resource-constrained devices. Our project takes a different approach by limiting the use of deep learning to the initial stage of keypoint detection, where it excels at identifying critical features such as vehicle parts and keypoints from 2D images. Once these keypoints are identified, the methodology transitions to geometry-based point tracking and traditional computer vision techniques to perform 3D reconstruction and pose estimation. This strategic design significantly improves computational efficiency, as geometry-based methods are less resource-intensive than deep learning while still being capable of leveraging the spatial relationships inherent in 3D space. Our project also proposes the application of the RANSAC (Random Sample Consensus) algorithm for robust handling of errors in detected keypoints. Finally, while previous research focuses on static 3D pose reconstruction, our project extends its scope to estimate vehicle speed dynamically over time by utilizing primitive frame-by-frame car tracking
 \ref{img:workflow}.
@@ -83,7 +90,7 @@ In this project, we adapt the OpenPifPaf pose-detection deep learning model for 
 
 \subsection{Geometry Processing}
 
-To understand the 3d pose estimation process a basic understanding of the geometry processing stage of the 3d rendering pipeline is required. That is the process of how a 3d model and its vertices are transformed from points in 3d space to pixels on a 2d screen. 
+To understand the 3d pose estimation process a basic understanding of the geometry processing stage of the 3d rendering pipeline is required. That is the process of how a 3d model and its vertices are transformed from points in 3d space to pixels on a 2d screen.
 
 The vertices of a 3D model are defined in their local coordinate system, the so-called local space. If the model is placed inside the 3D scene, its position in world space can be controlled with the model matrix $M_{mod}$. World space is the coordinate system of the \textit{world}, the 3d scene where all the objects, lights, and the camera live. The camera's position and rotation in world space are determined by the inverse of the view matrix $M_{view}^{-1}$. For the next steps of the 3D rendering pipeline, it is generally preferred to have objects in view space rather than world space. View space is the reference frame of the camera, meaning the camera is located at its origin looking straight ahead. To transform an object from world- into viewspace, it just needs to be multiplied by the view matrix, meaning to get from local- to view space the composition of the model and view matrices can be used: this composition is called model view Matrix $M_{MV}=M_{view}M_{mod}$.
 
@@ -117,18 +124,7 @@ The next step is figuring out where on the screen a vertex should be drawn. Once
     \end{bmatrix}
 \end{equation}
 
-
-
-\section{Introduction}
-\begin{center}
-    \cite{main-article}
-    (Leave this citation for now, otherwise it breaks (if we have 0 citations, and the command at the end))
-\end{center}
-
-
-
-\section{3d Pose Estimation}
-\setcounter{MaxMatrixCols}{20}
+The projection still needs to be modified to have more control over what exactly is seen on the screen. Instead of projecting on the $z=1$ plane, objects are projected onto the $z=n$ plane, the near plane. To preserve depth information objects are not completely projected onto the near plane, but instead to the space between the near- and far planes. This is done by multiplying with $M_{P'}$ before dividing by the w component. This has no implications for this project, since there exists no depth information in the detected keypoints. Additionally since it is easier to work in relative coordinates when faced with pictures of different sizes, the projected view coordinates are finally transformed into normalized device coordinates (NDC) by multiplying with $M_{P''}$ (see \ref{eqn:API_matrix}). Normalized device coordinates are a coordinate system around the origin with the bounds of $\left[-1, 1\right]$ for every axis. The relative pixel coordinates of a vertex can simply be read off the $x$ and $y$ positions of the points in NDC. To get the exact pixel positions these relations between NDC- and pixel coordinates can be used:  $x_p = ({x'}/{2} + 0.5) \cdot width$ and $y_p = ({y'}/{2} + 0.5) \cdot height$.
 
 \begin{figure*}[h]
     \begin{equation} \label{eqn:API_matrix}
@@ -160,107 +156,27 @@ The next step is figuring out where on the screen a vertex should be drawn. Once
     }
 \end{figure*}
 
-($A = U\Sigma V^{T}$)
-\cite{SVD}
-In the SVD $Ab = U\Sigma V^{T}b = 0$ implies $V^{T}b = 0$ since $U$ is invertible and has no nontrivial solutions for $Ub = 0$.
-Thus $V^{T}b$ must be a vector where only the rows corresponding to zero singular values contribute to the null space.
-The columns of $V$ that correspond to zero singular values in $\Sigma$ combined form a basis for the null space of $A$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\columnwidth]{./images/focal_lenght_and_field_of_view.png}
+    \caption{The sensor width and the focal length are used to calculate the camera's field of view.}
+    \label{img:fov}
+\end{figure}
 
-\[
-    \renewcommand{\arraystretch}{1.5}
-    \left[\begin{array}{@{}c:c@{}}
-            R                        & t \\ \hdashline
-            \begin{array}{@{}ccc@{}}
-                0 & 0 & 0
-            \end{array} & 1
-        \end{array}\right]
-\]
+This process basically transforms the view frustum into a cube of side length two around the origin (see \ref{img:view_to_ndc}).
 
-$\leq$
-
-\begin{lstlisting}[language=Python, basicstyle=\small, tabsize=4]
-#Pseudo code of the matching process
-#cars keeps track of all the cars in the scene
-#cars_n contains all the cars in the new frame
-for old_car in cars:
-    c, d = closest_car(cars_n, old_car)
-	if d > max_distance:
-        #the car left the frame
-	    cars.remove(old_car)
-	else:
-        old.match(c)
-        #every car can only be matched once
-        cars_n.remove(new_car)
-
-#all remaining not matched new cars
-for new_car in cars_n: 
-    #a new car has entered the frame 
-    cars.append(new_car) 
-\end{lstlisting}
-
-
-\begin{multicols}{2}
-
-    double column text here. .double column text here. . .
-    double column text here. . .
-    double column text here. . .
-    double column text here. . .lkasj fundingasdf
-
-    lsakdfj laks ich icha heise laskdjf lasdffi cich ic ach
-    .
-
-\end{multicols}
-lkasdjf lakjsd flkajsdl $x_p = ({x'}/{2} + 0.5) \cdot width$ and $y_p = ({y'}/{2} + 0.5) \cdot height$ fkjasdl fjasldj flaskdjf laskdjf laksjdfl kajsdflkajsdlfjasldkfjalsdkjflaskjdf laskdjf lasjkdfl aksjdflkasjd flaskjdf lkasdjf lkasjdf laksjdfl akjsdlfj asldkfj alsdjkf lasdjf laskdjf laskdjf laksdjfl aksdjfl askdjl askjf l
-
-\begin{equation}
-    FOV = 2 \cdot \arctan\left(\frac{s_w}{2f}\right),
-    r = n \cdot \tan\left(\frac{FOV}{2}\right)
-\end{equation}
-
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\columnwidth]{./images/view_coordinates_to_ndc.png}
     \caption{Perspective projection from view space to NDC in 2d.}
     \label{img:view_to_ndc}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.7\columnwidth]{./images/wireframes.png}
-    \caption{Different car wireframes used. From left to right Ford Explorer, Volvo V60, Nissan Altima.}
-    \label{img:wireframes}
-\end{figure}
 
-double column text here. .double column text here. . .
-double column text here. . .
-double column text here. . .
-double column text here. . .lkasj fundingasdf
-double column text here. .double column text here. . .
-double column text here. . .
-double column text here. . .
-double column text here. . .lkasj fundingasdf
-double column text here. .double column text here. . .
-double column text here. . .
-double column text here. . .
-double column text here. . .lkasj fundingasdf
+\subsection{Modelview Matrix Approximation}
 
-\begin{wrapfigure}{L}{0.5\columnwidth}
-    \centering
-    \includegraphics[width=0.45\columnwidth]{./images/focal_lenght_and_field_of_view.png}
-    \caption{The sensor width and the focal length are used to calculate the camera's field of view.}
-    \label{img:fov}
-\end{wrapfigure}
+To get the approximate 3d position of the cars, the detected 2d key points need to be correlated with their 3d counterparts. As discussed earlier the screen space positions can be computed by multiplying the vertices in local space with the modelview matrix $M_{MV}$ and the projection matrix $M_P$ before dividing by w.
 
-double column text here. .double column text here. . .
-double column text here. . .
-double column text here. . .
-double column text here. . .lkasj fundingasdf
-double column text here. .double column text here. . .
-double column text here. . .
-double column text here. . .
-double column text here. . .lkasj fundingasdf
-
-Matrix representation of the standard projection onto the z = 1 plane.
 \begin{equation}
     \begin{bmatrix}
         1 & 0 & 0 & 0 \\
@@ -289,7 +205,18 @@ Matrix representation of the standard projection onto the z = 1 plane.
     \end{bmatrix}
 \end{equation}
 
-\begin{figure*}[htbp]
+This matrix multiplication and the final division by the homogeneous component can be performed and solved for $x'$ and $y'$ that gives:
+
+\begin{equation}
+    x' = \frac{c_1 a x + c_1 b y + c_1 c z + c_1 d}{ix + jy + kz + l}
+\end{equation}
+\begin{equation}
+    y' = \frac{c_2 e x + c_2 f y + c_2 g z + c_2 h}{ix + jy + kz + l}
+\end{equation}
+
+Now one can multiply by the denominator and set both equations to 0. With the assumption that the focal length and sensor size of the camera are known and we have a matching from the key points to the vertices of a 3d model, the only unknown are the values of $M_{MV}$, meaning $c_{1}..c_{4}$. Since this relation hold for every pair of points (($p_{1} , p_{1}'), (p_{2} , p_{2}'), ..., (p_{n}, p_{n}'$)), the following system of equation can be created (see \ref{eqn:DLT}).
+
+\begin{figure*}[h]
     \begin{equation} \label{eqn:DLT}
         \begin{bmatrix}
             -c_1 x_1 & -c_1 y_1 & -c_1 z_1 & -c_1   & 0        & 0        & 0        & 0      & x_1 x_{1}' & y_1 x_{1}' & z_1 x_{1}' & x_{1}' \\
@@ -316,53 +243,65 @@ Matrix representation of the standard projection onto the z = 1 plane.
     \end{equation}
 \end{figure*}
 
+The solution to this homogeneous system of equations ($Ab = 0$) can be obtained by finding the null space of the matrix $A$. The null space is the set of all vectors $b$ that satisfy $Ab = 0$. This set can be found with the help of a  singular value decomposition (SVD) that factorizes a matrix $A$ into a rotation, followed by a rescaling followed by another rotation ($A = U\Sigma V^{T}$) \cite{SVD}. In the SVD the formula $Ab = U\Sigma V^{T}b = 0$ implies $V^{T}b = 0$ since $U$ is invertible and has no nontrivial solutions for $Ub = 0$. Thus $V^{T}b$ must be a vector where only the rows corresponding to zero singular values contribute to the null space. The columns of $V$ that correspond to zero singular values in $\Sigma$ combined form a basis for the null space of $A$. In this way one solution for the system of equations can be found. Out of this solution the following matrix can be created:
 
-The API projection Matrix
+\begin{equation}
+    \renewcommand{\arraystretch}{1.5}
+    \left[\begin{array}{@{}c:c@{}}
+            R                        & t \\ \hdashline
+            \begin{array}{@{}ccc@{}}
+                0 & 0 & 0
+            \end{array} & 1
+        \end{array}\right]
+\end{equation}
+
+Here $R$ stands for a $3\times3$ matrix that holds the rotation and scaling part of the solution and $t$ for a vector of size 3 containing the translation. Together they do not uniquely define the modelview matrix, since this result is scale invariant. At this point the model cannot distinguish between a big object far away and a small object close by since their projections on the screen would look the same to the camera. But the fact that the scale is 1 solves this dilemma. This means that $R$ is orthogonal, meaning it has only rotational components, but no scaling. The correct $R$ can be calculated with another SVD, by just omitting $\Sigma$, which avoids any scaling; a new $R$ can be calculated this way: $R' = UV^{T}$. The last step is scaling $t$ by the same amount and replacing $R$ by $R'$ in the result; the modelview matrix is found.
+
+For this process to work it is very important that the 3d model is as close as possible to the real geometry of the object where the key points came from. To minimize differences our model uses three different car wireframes \ref{img:wireframes} and picks the one with the smallest fitting error (the error is the sum of distances of the key points and projected 3d vertices in NDC). The different cars were picked to cover a wide range of possible car sizes, from midsized, over station wagons up to SUVs.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{./images/wireframes.png}
+    \caption{Different car wireframes used. From left to right Ford Explorer, Volvo V60, Nissan Altima.}
+    \label{img:wireframes}
+\end{figure}
+
+\subsection{Estimation Refinement}
+
+Since the detected key points can be incorrect it is of utmost importance that the model is robust against outliers and small errors. This problem can be improved by utilizing random sample consensus (RANSAC), an algorithm that estimates the right parameters for a mathematical model from a set of measured/observed data that can contain outliers or values with large errors \cite{RANSAC}. In this case the basic RANSAC algorithm has been modified slightly to check all subsets of a specific size, since the total number of samples is $\leq$ 14, meaning the total number of subsets is a manageable size. This transforms this version of RASAC into a deterministic algorithm that always produces the same output.
+
+\section{Speed Estimation}
+
+\subsection{Car Matching Over Multiple Frames}
+
+To calculate the speed, it is not enough to know the relative location of the car at a specific point in time. It is also necessary to know the location of the same car at a different point in time. Since the Keypoint Detection step only detects the car's key points and bounding box, it is not trivial to know which car is which in the next frame. But since videos are usually shot at 30fps or more, a car's bounding box does not move very far from one frame to another. Considering this and the fact that generally there are not a lot of cars whose bounding boxes overlap, the simple approach of matching the two cars whose bounding boxes are closest to each other works just fine. To allow new cars to enter the frame and old cars to leave the frame the variable $max\_distance$ is used, which describes the maximum distance a car can move from one frame to the next.
 
 
+\begin{lstlisting}[language=Python, basicstyle=\small, tabsize=4]
+#Pseudo code of the matching process
+#cars keeps track of all the cars in the scene
+#cars_n contains all the cars in the new frame
+for old_car in cars:
+    c, d = closest_car(cars_n, old_car)
+    if d > max_distance:
+        #the car left the frame
+        cars.remove(old_car)
+    else:
+        old.match(c)
+        #every car can only be matched once
+        cars_n.remove(new_car)
 
+#all remaining not matched new cars
+for new_car in cars_n: 
+    #a new car has entered the frame 
+    cars.append(new_car) 
+\end{lstlisting}
 
+Once the 3d position of a car over multiple frames is known, the car's speed can be calculated by dividing the distance traveled by the elapsed time. 
 
+\section{Materials}
 
-To get the screen-space position of a vertex, we multiply it by its Modelview Matrix and API Projection Matrix before doing the projective division.
-We have all the parameters except the Model Matrix. $p' = M_{API} M_{Modelview} p$
-
-\begin{equation*}
-    \begin{bmatrix}
-        x' \\
-        y' \\
-    \end{bmatrix}
-    \overset{\text{div w}}{\equiv}
-    \begin{bmatrix}
-        c_1 & 0   & 0   & 0   \\
-        0   & c_2 & 0   & 0   \\
-        0   & 0   & c_3 & c_4 \\
-        0   & 0   & 1   & 0
-    \end{bmatrix}
-    \begin{bmatrix}
-        a & b & c & d \\
-        e & f & g & h \\
-        i & j & k & l \\
-        0 & 0 & 0 & 1
-    \end{bmatrix}
-    \begin{bmatrix}
-        x \\
-        y \\
-        z \\
-        1
-    \end{bmatrix}
-\end{equation*}
-
-If we multiply that out, we get for $x'$ and $y'$:
-
-\begin{gather*}
-    x' = \frac{c_1 a x + c_1 b y + c_1 c z + c_1 d}{ix + jy + kz + l} \\
-    y' = \frac{c_2 e x + c_2 f y + c_2 g z + c_2 h}{ix + jy + kz + l}
-\end{gather*}
-
-We can multiply by the denuminator and solve for 0. Since this holds for every pair of points $(p_{1} , p_{1}'), (p_{2} , p_{2}'), ..., (p_{n}, p_{n}')$ that we track we can create the following system of equation:
-\ref{eqn:DLT}
-
+The original source code for the keypoint detection can be found here \cite{keypoints} and the source code for the 3d pose reconstruction and 3d visualization is available on this github repository \cite{keypoint2pose}.
 
 \bibliographystyle{./IEEEtran.bst}
 \bibliography{./robot_vision}
