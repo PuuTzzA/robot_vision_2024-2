@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  12 DEC 2024 11:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  12 DEC 2024 12:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -587,7 +587,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<./images/workflow.png, id=60, 2095.83pt x 329.73187pt>
+<./images/workflow.png, id=61, 2095.83pt x 329.73187pt>
 File: ./images/workflow.png Graphic file (type png)
 <use ./images/workflow.png>
 Package pdftex.def Info: ./images/workflow.png  used on input line 72.
@@ -607,7 +607,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/focal_lenght_and_field_of_view.png, id=78, 301.35753pt x 301.35753pt>
+<./images/focal_lenght_and_field_of_view.png, id=79, 301.35753pt x 301.35753pt>
 File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
 <use ./images/focal_lenght_and_field_of_view.png>
 Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 153.
@@ -615,7 +615,7 @@ Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on in
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<./images/view_coordinates_to_ndc.png, id=80, 513.49738pt x 604.31033pt>
+<./images/view_coordinates_to_ndc.png, id=81, 513.49738pt x 604.31033pt>
 File: ./images/view_coordinates_to_ndc.png Graphic file (type png)
 <use ./images/view_coordinates_to_ndc.png>
 Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 162.
@@ -628,7 +628,7 @@ Underfull \hbox (badness 1354) in paragraph at lines 208--209
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./images/wireframes.png, id=104, 2509.375pt x 1003.75pt>
+<./images/wireframes.png, id=105, 2509.375pt x 1003.75pt>
 File: ./images/wireframes.png Graphic file (type png)
 <use ./images/wireframes.png>
 Package pdftex.def Info: ./images/wireframes.png  used on input line 255.
@@ -642,32 +642,32 @@ File: omlptm.fd
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 276.
-<./images/keypoint_vis1.jpg, id=120, 1423.56844pt x 803.25093pt>
+<./images/keypoint_vis1.jpg, id=121, 1423.56844pt x 803.25093pt>
 File: ./images/keypoint_vis1.jpg Graphic file (type jpg)
 <use ./images/keypoint_vis1.jpg>
 Package pdftex.def Info: ./images/keypoint_vis1.jpg  used on input line 298.
 (pdftex.def)             Requested size: 120.95892pt x 68.24478pt.
-<./images/keypoint_vis3.jpg, id=121, 1437.11906pt x 804.75656pt>
+<./images/keypoint_vis3.jpg, id=122, 1437.11906pt x 804.75656pt>
 File: ./images/keypoint_vis3.jpg Graphic file (type jpg)
 <use ./images/keypoint_vis3.jpg>
 Package pdftex.def Info: ./images/keypoint_vis3.jpg  used on input line 299.
 (pdftex.def)             Requested size: 120.95892pt x 67.73416pt.
-<./images/video5_out_1080.png, id=127, 1927.2pt x 1084.05pt>
+<./images/video5_out_1080.png, id=128, 1927.2pt x 1084.05pt>
 File: ./images/video5_out_1080.png Graphic file (type png)
 <use ./images/video5_out_1080.png>
 Package pdftex.def Info: ./images/video5_out_1080.png  used on input line 308.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
-<./images/custom_0155.png, id=128, 1927.2pt x 1084.05pt>
+<./images/custom_0155.png, id=129, 1927.2pt x 1084.05pt>
 File: ./images/custom_0155.png Graphic file (type png)
 <use ./images/custom_0155.png>
 Package pdftex.def Info: ./images/custom_0155.png  used on input line 310.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
-<./images/video5_out_1096.png, id=129, 1927.2pt x 1084.05pt>
+<./images/video5_out_1096.png, id=130, 1927.2pt x 1084.05pt>
 File: ./images/video5_out_1096.png Graphic file (type png)
 <use ./images/video5_out_1096.png>
 Package pdftex.def Info: ./images/video5_out_1096.png  used on input line 312.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
-<./images/custom_0116.png, id=130, 1927.2pt x 1084.05pt>
+<./images/custom_0116.png, id=131, 1927.2pt x 1084.05pt>
 File: ./images/custom_0116.png Graphic file (type png)
 <use ./images/custom_0116.png>
 Package pdftex.def Info: ./images/custom_0116.png  used on input line 314.
@@ -699,16 +699,16 @@ Package rerunfilecheck Info: File `robot_vision_final_report.out' has not change
  ) 
 Here is how much of TeX's memory you used:
  15657 strings out of 474542
- 252548 string characters out of 5744446
+ 252544 string characters out of 5744446
  1976978 words of memory out of 5000000
  37621 multiletter control sequences out of 15000+600000
  596392 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,1417b,1489s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on robot_vision_final_report.pdf (5 pages, 15681603 bytes).
+Output written on robot_vision_final_report.pdf (5 pages, 15681812 bytes).
 PDF statistics:
- 258 PDF objects out of 1000 (max. 8388607)
+ 259 PDF objects out of 1000 (max. 8388607)
  64 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

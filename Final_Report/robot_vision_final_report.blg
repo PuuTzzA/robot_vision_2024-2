@@ -13,13 +13,13 @@ Database file #1: ./robot_vision.bib
 -- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-Warning--empty journal in Carfusion
-Warning--empty year in Carfusion
+Warning--empty journal in CFusion
+Warning--empty year in CFusion
 
 Done.
 You've used 5 entries,
             4024 wiz_defined-function locations,
-            833 strings with 8050 characters,
+            833 strings with 8046 characters,
 and the built_in function-call counts, 1967 in all, are:
 = -- 151
 > -- 23
