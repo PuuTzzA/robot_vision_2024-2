@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  10 DEC 2024 02:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.12.8)  12 DEC 2024 11:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -590,17 +590,17 @@ Package caption Info: End \AtBeginDocument code.
 <./images/workflow.png, id=60, 2095.83pt x 329.73187pt>
 File: ./images/workflow.png Graphic file (type png)
 <use ./images/workflow.png>
-Package pdftex.def Info: ./images/workflow.png  used on input line 73.
+Package pdftex.def Info: ./images/workflow.png  used on input line 72.
 (pdftex.def)             Requested size: 252.0pt x 39.6466pt.
  [1{C:/Users/putze/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
  <./images/workflow.png>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -610,7 +610,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./images/focal_lenght_and_field_of_view.png, id=78, 301.35753pt x 301.35753pt>
 File: ./images/focal_lenght_and_field_of_view.png Graphic file (type png)
 <use ./images/focal_lenght_and_field_of_view.png>
-Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 154.
+Package pdftex.def Info: ./images/focal_lenght_and_field_of_view.png  used on input line 153.
 (pdftex.def)             Requested size: 100.79846pt x 100.80019pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -618,55 +618,59 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <./images/view_coordinates_to_ndc.png, id=80, 513.49738pt x 604.31033pt>
 File: ./images/view_coordinates_to_ndc.png Graphic file (type png)
 <use ./images/view_coordinates_to_ndc.png>
-Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 163.
+Package pdftex.def Info: ./images/view_coordinates_to_ndc.png  used on input line 162.
 (pdftex.def)             Requested size: 201.60077pt x 237.25687pt.
  [2 <./images/focal_lenght_and_field_of_view.png> <./images/view_coordinates_to_ndc.png>]
+Underfull \hbox (badness 1354) in paragraph at lines 208--209
+\OT1/ptm/m/n/10 match-ing from the key points to the ver-tices of a 3d
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <./images/wireframes.png, id=104, 2509.375pt x 1003.75pt>
 File: ./images/wireframes.png Graphic file (type png)
 <use ./images/wireframes.png>
-Package pdftex.def Info: ./images/wireframes.png  used on input line 256.
+Package pdftex.def Info: ./images/wireframes.png  used on input line 255.
 (pdftex.def)             Requested size: 176.39923pt x 70.54536pt.
 [3 <./images/wireframes.png>] (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for OML+ptm on input line 277.
+LaTeX Font Info:    Trying to load font information for OML+ptm on input line 276.
  (C:\Users\putze\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 277.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 276.
 <./images/keypoint_vis1.jpg, id=120, 1423.56844pt x 803.25093pt>
 File: ./images/keypoint_vis1.jpg Graphic file (type jpg)
 <use ./images/keypoint_vis1.jpg>
-Package pdftex.def Info: ./images/keypoint_vis1.jpg  used on input line 299.
+Package pdftex.def Info: ./images/keypoint_vis1.jpg  used on input line 298.
 (pdftex.def)             Requested size: 120.95892pt x 68.24478pt.
 <./images/keypoint_vis3.jpg, id=121, 1437.11906pt x 804.75656pt>
 File: ./images/keypoint_vis3.jpg Graphic file (type jpg)
 <use ./images/keypoint_vis3.jpg>
-Package pdftex.def Info: ./images/keypoint_vis3.jpg  used on input line 300.
+Package pdftex.def Info: ./images/keypoint_vis3.jpg  used on input line 299.
 (pdftex.def)             Requested size: 120.95892pt x 67.73416pt.
 <./images/video5_out_1080.png, id=127, 1927.2pt x 1084.05pt>
 File: ./images/video5_out_1080.png Graphic file (type png)
 <use ./images/video5_out_1080.png>
-Package pdftex.def Info: ./images/video5_out_1080.png  used on input line 309.
+Package pdftex.def Info: ./images/video5_out_1080.png  used on input line 308.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
 <./images/custom_0155.png, id=128, 1927.2pt x 1084.05pt>
 File: ./images/custom_0155.png Graphic file (type png)
 <use ./images/custom_0155.png>
-Package pdftex.def Info: ./images/custom_0155.png  used on input line 311.
+Package pdftex.def Info: ./images/custom_0155.png  used on input line 310.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
 <./images/video5_out_1096.png, id=129, 1927.2pt x 1084.05pt>
 File: ./images/video5_out_1096.png Graphic file (type png)
 <use ./images/video5_out_1096.png>
-Package pdftex.def Info: ./images/video5_out_1096.png  used on input line 313.
+Package pdftex.def Info: ./images/video5_out_1096.png  used on input line 312.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
 <./images/custom_0116.png, id=130, 1927.2pt x 1084.05pt>
 File: ./images/custom_0116.png Graphic file (type png)
 <use ./images/custom_0116.png>
-Package pdftex.def Info: ./images/custom_0116.png  used on input line 315.
+Package pdftex.def Info: ./images/custom_0116.png  used on input line 314.
 (pdftex.def)             Requested size: 226.79846pt x 127.56612pt.
  [4 <./images/keypoint_vis1.jpg> <./images/keypoint_vis3.jpg>] (robot_vision_final_report.bbl
 Underfull \hbox (badness 4569) in paragraph at lines 38--41
@@ -702,7 +706,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  79i,13n,93p,1417b,1489s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/putze/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on robot_vision_final_report.pdf (5 pages, 15681947 bytes).
+Output written on robot_vision_final_report.pdf (5 pages, 15681603 bytes).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  64 named destinations out of 1000 (max. 500000)

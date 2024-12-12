@@ -28,7 +28,7 @@
      inkscape:document-units="px"
      showgrid="false"
      inkscape:zoom="0.60097075"
-     inkscape:cx="1626.5351"
+     inkscape:cx="2551.7049"
      inkscape:cy="242.94028"
      inkscape:window-width="1440"
      inkscape:window-height="878"
@@ -203,15 +203,15 @@
            y="194.6339" /><text
            xml:space="preserve"
            style="font-size:12.3472px;line-height:1.15;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;letter-spacing:0px;word-spacing:-0.00261129px;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.926041;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.77813, 2.77813;paint-order:stroke markers fill"
-           x="663.76373"
+           x="663.58582"
            y="209.39012"
            id="text21"
            transform="scale(1.0001349,0.99986511)"><tspan
              sodipodi:role="line"
              style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.3472px;line-height:1.15;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;stroke:none;stroke-width:0.926041"
-             x="663.76373"
+             x="663.58582"
              y="209.39012"
-             id="tspan21">3D Vehicle Model</tspan></text><text
+             id="tspan21">3D Vehicle Pose</tspan></text><text
            xml:space="preserve"
            style="font-size:13.7148px;line-height:1;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;letter-spacing:0px;word-spacing:-0.00257152px;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:0.926041;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2.77813, 2.77813;paint-order:stroke markers fill"
            x="664.29254"
